@@ -1,7 +1,7 @@
 name: "Victron BLE to MQTT"
 description: "Forward available Victron BLE data to MQTT"
 url: "https://github.com/AverageJoe89/joes-ha-addons/tree/main/victron-ble-mqtt"
-version: "1.0.1"
+version: "1.0.2"
 slug: "victron_ble2mqtt"
 init: false
 arch:
@@ -20,8 +20,6 @@ privileged:
 devices:
   - /dev/bus/usb
   - /var/run/dbus
-volumes:
-  - /run/dbus:/run/dbus:ro
 
 schema:
   mqtt_server: str
