@@ -1,0 +1,15 @@
+[systemd]
+# Information for systemd helper functions.
+template_path = "/victron-ble2mqtt/.venv-app/lib/python3.12/site-packages/cli_base/systemd/service_template.txt"
+systemd_base_path = "/etc/systemd/system"
+service_slug = "victron_ble2mqtt"
+service_file_path = "/etc/systemd/system/victron_ble2mqtt.service"
+
+[systemd.template_context]
+# Context values for the systemd service file content.
+verbose_service_name = "victron-ble2mqtt"
+user = "root"
+group = "root"
+work_dir = "/root"
+exec_start = "/victron-ble2mqtt/.venv-app/bin/victron_ble2mqtt_app publish-loop"
+syslog_identifier = "victron_ble2mqtt"
