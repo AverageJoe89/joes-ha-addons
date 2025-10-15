@@ -1,6 +1,7 @@
 name: "Victron BLE to MQTT"
 description: "Forward available Victron BLE data to MQTT"
-version: "1.0.0"
+url: "https://github.com/AverageJoe89/joes-ha-addons/tree/main/victron-ble-mqtt"
+version: "1.0.1"
 slug: "victron_ble2mqtt"
 init: false
 arch:
@@ -17,8 +18,8 @@ privileged:
   - NET_ADMIN
   - SYS_ADMIN
 devices:
-  - /dev/bus/usb:/dev/bus/usb
-  - /var/run/dbus:/var/run/dbus
+  - /dev/bus/usb
+  - /var/run/dbus
 volumes:
   - /run/dbus:/run/dbus:ro
 
@@ -41,6 +42,5 @@ options:
   mqtt_config_publish_throttle: 20
   victron_secrets:
     - "secret1"
-    - "secret2"
 
 image: "ghcr.io/averagejoe89/hassio-victron-ble2mqtt-{arch}"
