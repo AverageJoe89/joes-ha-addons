@@ -9,7 +9,7 @@ Add-on documentation: <https://developers.home-assistant.io/docs/add-ons>
 
 This repository contains the following add-ons
 
-### [Victron BLE2MQQT](./victron-ble-mqtt)
+### [Victron BLE2MQTT](./victron-ble-mqtt)
 So you can see your Victron stuff on HA!
 
 ![Supports aarch64 Architecture][aarch64-shield]
