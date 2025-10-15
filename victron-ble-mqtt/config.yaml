@@ -42,3 +42,5 @@ options:
   victron_secrets:
     - "secret1"
     - "secret2"
+
+image: "ghcr.io/averagejoe89/hassio-victron-ble2mqtt-{arch}"
